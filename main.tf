@@ -104,4 +104,5 @@ resource "aws_lambda_permission" "allow_cloudwatch_logs" {
   function_name = aws_lambda_function.github_webhook_lambda.function_name
   principal     = "logs.amazonaws.com"
   source_arn    = aws_cloudwatch_log_group.lambda_log_group.arn
+  
 }
