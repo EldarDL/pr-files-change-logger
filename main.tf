@@ -63,7 +63,7 @@ output "api_gateway_url" {
 }
 
 resource "github_repository_webhook" "github_webhook" {
-  repository = "checkpoint-project"
+  repository = var.github_repository
   events     = ["pull_request"]
 
   configuration {
