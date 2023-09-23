@@ -1,0 +1,9 @@
+.idea
+*.tfstate*
+*.tfstate.backup
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+files-changed-log-lambda-test.zip
+files-changed-log-lambda-test2.zip
+```
