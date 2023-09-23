@@ -79,7 +79,7 @@ resource "aws_lambda_function" "github_webhook_lambda" {
   handler      = "app.lambda_handler"
   runtime      = "python3.9"
 
-  filename = "./files-changed-log-lambda-prod.zip"
+  filename = "./files-changed-log-lambda.zip"
 
   role = aws_iam_role.lambda_role.arn
 
@@ -104,5 +104,5 @@ resource "aws_lambda_permission" "allow_cloudwatch_logs" {
   function_name = aws_lambda_function.github_webhook_lambda.function_name
   principal     = "logs.amazonaws.com"
   source_arn    = aws_cloudwatch_log_group.lambda_log_group.arn
-  
+
 }
