@@ -79,7 +79,7 @@ resource "aws_lambda_function" "github_webhook_lambda" {
   handler      = "app.lambda_handler"
   runtime      = "python3.9"
 
-  filename = "./files-changed-log-lambda.zip"
+  filename = "./files-changed-log-lambda-prod.zip"
 
   role = aws_iam_role.lambda_role.arn
 
