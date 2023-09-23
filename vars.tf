@@ -13,3 +13,8 @@ variable "aws_region" {
 variable "aws_account_id" {
     description = "AWS account ID"
 }
+
+variable "github_repository" {
+  description = "GitHub repository"
+  default = ""
+}
