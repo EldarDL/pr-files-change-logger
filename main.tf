@@ -64,7 +64,7 @@ output "api_gateway_url" {
 
 resource "github_repository_webhook" "github_webhook" {
   repository = "checkpoint-project"
-  events     = ["push"]
+  events     = ["pull_request"]
 
   configuration {
     url          = "${aws_apigatewayv2_api.github_webhook_api.api_endpoint}/prod/"
